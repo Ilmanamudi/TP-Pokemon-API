@@ -1,6 +1,4 @@
 const container = document.getElementById("pokemonContainer");
-const spinner = document.getElementById("spinner");
-
 
 const createCardHTML = (pokemon) => {
   const { id, name, sprites, types, weight, height} = pokemon;

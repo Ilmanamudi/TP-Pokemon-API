@@ -10,6 +10,11 @@ body {
     overflow: hidden;
 }
 
+[data-bs-theme="dark"] body {
+  background-image:
+    url("../img/pokemon-background-cell-dark.png");
+}
+
 .space-logo {
     margin-top: 15vh !important;
 }
@@ -61,6 +66,11 @@ body {
     border-radius: 10px;
 }
 
+[data-bs-theme="dark"] #pokemonContainer::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
 Footer {
 
     position: fixed;
@@ -73,3 +83,6 @@ Footer {
     z-index: 100;
 }
 
+[data-bs-theme="dark"] Footer {
+    background-color: rgba(64, 68, 82, 0.568);
+}
