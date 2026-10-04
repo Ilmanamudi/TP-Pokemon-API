@@ -27,7 +27,6 @@ const heightMt = height/10;
     </div>
   </div>
   `;
- 
 };
 
 
@@ -52,3 +51,32 @@ export const renderSinglePokemon = (pokemon) => {
 };
 
 
+export function initThemeToggle() {
+    const toggleBtn = document.getElementById('themeToggleBtn');
+    const htmlElement = document.documentElement; 
+
+    
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-bs-theme', savedTheme);
+    updateBtnStyle(toggleBtn, savedTheme);
+
+    
+    toggleBtn.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-bs-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-bs-theme', newTheme);
+        localStorage.setItem('theme', newTheme); 
+        updateBtnStyle(toggleBtn, newTheme);
+    });
+}
+
+function updateBtnStyle(btn, theme) {
+    if (theme === 'dark') {
+        btn.textContent = '☀️';
+        btn.classList.replace('btn-dark', 'btn-light');
+    } else {
+        btn.textContent = '🌙';
+        btn.classList.replace('btn-light', 'btn-dark');
+    }
+}
