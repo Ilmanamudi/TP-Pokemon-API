@@ -1,7 +1,7 @@
 import { fetchAllPokemons, fetchPokemonByIdOrName } from "./services/pokemonService.js";
 import { renderPokemonsList, renderSinglePokemon,  initThemeToggle } from "./helpers/ui.js";
-import {showAlert} from "./helpers/sweetAlert.js";
-import {showSpinner, hideSpinner} from "./helpers/spinner.js";
+import { showAlert} from "./helpers/sweetAlert.js";
+import { showSpinner, hideSpinner} from "./helpers/spinner.js";
 
 const searchBtn = document.getElementById("searchBtn");
 const resetBtn = document.getElementById("resetBtn");
